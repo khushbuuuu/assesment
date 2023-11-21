@@ -11,8 +11,35 @@ body {
   h1{
     margin: 0;
   }
+  .loginanc{
+    text-decoration: none;
+    color: white;
+  }
+  .admin{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+
+  }
+  .name{
+    background-color: rgb(59, 118, 45);
+    color: white;
+    margin-top: 4px;
+    font-size: small;
+    margin-left: 20px;
+  }
+  .logoutbt{
+    text-decoration: none;
+    color: white;
+    background-color:  rgb(59, 118, 45);
+  }
+  .cardimg{
+    width: 90px;
+    height: 150px;
+  }
   .modalb{
-    margin-left: 15vw;
+    margin-left: 10vw;
     margin-top: 477px;
   }
   .modalbtn{
@@ -21,17 +48,18 @@ body {
     background-color: rgb(59, 118, 45);
     color: white;
   }
+  
 .container {
   display: flex;
   margin-left: auto;
   margin-right: auto;
   margin-top: 130px;
-    width: 60vw;
-    height: 70vh;
+    width: 900px;
+    height: 528px;
     
-    background-image: url("./assets/Group\ 19.png");
-   
-    background-position:center;
+    background-image: url("./assets/Group\ 35.svg");
+   background-position: center;
+    background-repeat: no-repeat;
     background-size:auto;
     
   }
@@ -48,7 +76,7 @@ body {
     }
 .content{
   margin-top: 80px;
-  margin-left: 50px;
+  margin-left: 230px;
   width:24vw;
 }
 .sub{

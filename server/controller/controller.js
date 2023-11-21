@@ -1,8 +1,22 @@
 const UploadModel = require('../model/schema');
 const fs=require('fs')
 exports.home=async(req,res)=>{
-   const all_images = await UploadModel.find()
-    res.render('main',{images:all_images});
+    const all_images = await UploadModel.find();
+    var isAuth=req.oidc.isAuthenticated();
+    
+    
+    console.log(req.oidc.isAuthenticated());
+    if(!isAuth){
+    res.render("index.ejs", {title: "Express", isAuthenticated: req.oidc.isAuthenticated(),
+    user: req.oidc.user
+});}
+else{
+    
+    res.render('main.hbs',{images:all_images});
+
+}
+   
+   
 }
 exports.uploads = (req,res, next)=>{
     const files=req.files;
@@ -42,7 +56,7 @@ exports.uploads = (req,res, next)=>{
     })
     Promise.all(result)
     .then(msg=>{
-        res.json(msg);
+        res.redirect('/');
         
     })
     .catch(err=>{

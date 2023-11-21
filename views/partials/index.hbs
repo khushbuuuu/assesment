@@ -1,4 +1,7 @@
+
 <div class="imgcontainer">
+  
+  <li><a class="logoutbt" href="/logout/">Logout</a></li>
     <div class="modalb">
     <button class="modalbtn" id="myBtn">+</button></div>
     <div id="myModal" class="modal">
@@ -32,7 +35,7 @@
            {{#each this}}
            {{#if imageBase64}}
            <div class="col-3">
-            <img src='data:{{contentType}};base64,{{imageBase64}}' >
+            <img class="cardimg" src='data:{{contentType}};base64,{{imageBase64}}' >
            </div>
            {{/if}}
            {{/each}}
